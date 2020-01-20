@@ -1,0 +1,503 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".PengajuanActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:id="@id/rellay1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="16dp">
+
+            <!--<ImageView
+                android:id="@+id/plnlogo"
+                android:layout_width="150dp"
+                android:layout_height="200dp"
+                android:src="@drawable/pln"
+                android:layout_centerHorizontal="true"
+                android:scaleType="fitXY"/>-->
+
+            <EditText
+                android:visibility="gone"
+                android:id="@+id/sessionID"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_below="@+id/plnlogo"
+                android:layout_marginTop="5dp"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:textColor="#000000"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/txt1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/sessionID"
+                android:text="Nomor Restitusi"
+                android:textColor="#000000"
+                android:textSize="20sp" />
+
+            <EditText
+                android:id="@+id/edt_no_restitusi"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_below="@id/txt1"
+                android:layout_marginTop="5dp"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:textColor="#000000"
+                android:textSize="25sp"
+                android:inputType="number"/>
+
+            <TextView
+                android:id="@+id/txtTujuan"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/edt_no_restitusi"
+                android:text="Tujuan"
+                android:textColor="#000000"
+                android:textSize="20sp" />
+
+            <LinearLayout
+                android:id="@+id/linlayTujuan"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/txtTujuan"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/edt_darimana"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_weight="1"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="15dp"
+                    android:textColor="#000000"
+                    android:textSize="25sp" />
+
+                <TextView
+                    android:id="@+id/txtPemisahTujuan"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="-"
+                    android:textSize="30sp" />
+
+                <EditText
+                    android:id="@+id/edt_kemana"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_weight="1"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="15dp"
+                    android:textColor="#000000"
+                    android:textSize="25sp" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/txtAgenda"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/linlayTujuan"
+                android:layout_marginTop="10dp"
+                android:text="Agenda"
+                android:textColor="#000000"
+                android:textSize="20sp" />
+
+            <EditText
+                android:id="@+id/edt_agenda"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_below="@id/txtAgenda"
+                android:layout_marginTop="5dp"
+                android:inputType="textMultiLine"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:scrollbars="vertical"
+                android:textColor="#000000"
+                android:textSize="25sp"/>
+
+            <TextView
+                android:id="@+id/txtBerangkat"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/edt_agenda"
+                android:text="Tanggal Berangkat - Pulang"
+                android:textColor="#000000"
+                android:textSize="20sp" />
+
+            <LinearLayout
+                android:id="@+id/linlayBerangkat"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/txtBerangkat"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/edt_berangkat"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_weight="1"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="15dp"
+                    android:textColor="#000000"
+                    android:textSize="25sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="s/d"
+                    android:textSize="20sp" />
+
+                <EditText
+                    android:id="@+id/edt_pulang"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_weight="1"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="15dp"
+                    android:textColor="#000000"
+                    android:textSize="25sp"/>
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/txtlamaSPPD"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/linlayBerangkat"
+                android:text="Lama SPPD"
+                android:textColor="#000000"
+                android:textSize="20sp" />
+
+            <EditText
+                android:id="@+id/edt_lama_sppd"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_below="@id/txtlamaSPPD"
+                android:layout_marginTop="5dp"
+                android:hint="Contoh : 2 Hari"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:textColor="#000000"
+                android:textSize="25sp"/>
+
+            <TextView
+                android:id="@+id/txtBiayaTransportasi"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/edt_lama_sppd"
+                android:text="Biaya Transportasi"
+                android:textColor="#000000"
+                android:textSize="20sp" />
+
+            <LinearLayout
+                android:id="@+id/linlayTransportasi"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/txtBiayaTransportasi"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Rp."
+                    android:textColor="#000000"
+                    android:textSize="20sp" />
+
+                <EditText
+                    android:id="@+id/edt_biaya_transpor"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="5dp"
+                    android:inputType="number"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="15dp"
+                    android:textColor="#000000"
+                    android:textSize="20sp" />
+
+            </LinearLayout>
+
+
+            <TextView
+                android:id="@+id/txtBiayaPenginapan"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/linlayTransportasi"
+                android:text="Biaya Penginapan"
+                android:textColor="#000000"
+                android:textSize="20sp" />
+
+            <LinearLayout
+                android:id="@+id/linlay_Nginap"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/txtBiayaPenginapan"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Rp."
+                    android:textColor="#000000"
+                    android:textSize="20sp" />
+
+
+                <EditText
+                    android:id="@+id/edt_biaya_penginapan"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_below="@id/txtBiayaPenginapan"
+                    android:layout_marginTop="5dp"
+                    android:inputType="number"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="15dp"
+                    android:textColor="#000000"
+                    android:textSize="20sp"/>
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/txtjumlah"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/linlay_Nginap"
+                android:text="Jumlah Biaya"
+                android:textColor="#000000"
+                android:textSize="20sp" />
+
+            <LinearLayout
+                android:id="@+id/linlay_Jumlah"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/txtjumlah"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Rp."
+                    android:textColor="#000000"
+                    android:textSize="20sp" />
+
+                <EditText
+                    android:id="@+id/edt_jumlah"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_below="@id/txtjumlah"
+                    android:layout_marginTop="5dp"
+                    android:editable="false"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="15dp"
+                    android:textColor="#000000"
+                    android:textSize="20sp"/>
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/txt2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/linlay_Jumlah"
+                android:layout_marginTop="15dp"
+                android:text="Foto Formulir SPPD"
+                android:textColor="#000000"
+                android:textSize="20sp" />
+
+            <ImageView
+                android:id="@+id/imgV_sppd"
+                android:layout_width="300dp"
+                android:layout_height="250dp"
+                android:layout_below="@+id/txt2"
+                android:layout_centerHorizontal="true"
+                android:visibility="gone" />
+
+            <!--<Button
+                android:id="@+id/btn_upload_formulir_sppd"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/imgV_sppd"
+                android:layout_marginTop="10dp"
+                android:text="Choose Image" />-->
+
+            <Button
+                android:id="@+id/btn_upload_formulir_sppd1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/imgV_sppd"
+                android:layout_marginTop="10dp"
+                android:text="Take Picture"
+                android:drawableLeft="@drawable/ic_camera"/>
+
+
+            <TextView
+                android:id="@+id/txt3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/btn_upload_formulir_sppd1"
+                android:layout_marginTop="15dp"
+                android:text="Foto Tiket Pesawat PP"
+
+                android:textColor="#000000"
+                android:textSize="20sp" />
+
+            <ImageView
+                android:id="@+id/imgV_tiket_pesawat"
+                android:layout_width="300dp"
+                android:layout_height="250dp"
+                android:layout_below="@+id/txt3"
+                android:layout_centerHorizontal="true"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/btn_upload_tiket_pesawat"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/imgV_tiket_pesawat"
+                android:layout_marginTop="10dp"
+                android:text="Take Picture"
+                android:drawableLeft="@drawable/ic_camera"/>
+
+            <TextView
+                android:id="@+id/txt4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/btn_upload_tiket_pesawat"
+                android:layout_marginTop="15dp"
+                android:text="Foto Kwitansi Pembelian Tiket"
+                android:textColor="#000000"
+                android:textSize="20sp" />
+
+            <ImageView
+                android:id="@+id/imgV_kwitansi_pesawat"
+                android:layout_width="300dp"
+                android:layout_height="250dp"
+                android:layout_below="@+id/txt4"
+                android:layout_centerHorizontal="true"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/btn_upload_kwitansi_tiket"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/imgV_kwitansi_pesawat"
+                android:layout_marginTop="10dp"
+                android:text="Take Picture"
+                android:drawableLeft="@drawable/ic_camera"/>
+
+            <TextView
+                android:id="@+id/txt5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/btn_upload_kwitansi_tiket"
+                android:layout_marginTop="15dp"
+                android:text="Foto Boarding Pass"
+                android:textColor="#000000"
+                android:textSize="20sp" />
+
+            <ImageView
+                android:id="@+id/imgV_boarding_pass"
+                android:layout_width="300dp"
+                android:layout_height="250dp"
+                android:layout_below="@+id/txt5"
+                android:layout_centerHorizontal="true"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/btn_upload_boarding_pass"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/imgV_boarding_pass"
+                android:layout_marginTop="10dp"
+                android:text="Take Picture"
+                android:drawableLeft="@drawable/ic_camera"/>
+
+            <TextView
+                android:id="@+id/txt6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/btn_upload_boarding_pass"
+                android:layout_marginTop="15dp"
+                android:text="Foto Kwitansi Penginapan"
+                android:textColor="#000000"
+                android:textSize="20sp" />
+
+            <ImageView
+                android:id="@+id/imgV_kwitansi_penginapan"
+                android:layout_width="300dp"
+                android:layout_height="250dp"
+                android:layout_below="@+id/txt6"
+                android:layout_centerHorizontal="true"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/btn_upload_kwitansi_penginapan"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/imgV_kwitansi_penginapan"
+                android:layout_marginTop="10dp"
+                android:text="Take Picture"
+                android:drawableLeft="@drawable/ic_camera"/>
+
+            <TextView
+                android:id="@+id/txt7"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/btn_upload_kwitansi_penginapan"
+                android:layout_marginTop="15dp"
+                android:text="Foto SPPD Manual"
+                android:textColor="#000000"
+                android:textSize="20sp" />
+
+            <ImageView
+                android:id="@+id/imgV_sppd_manual"
+                android:layout_width="300dp"
+                android:layout_height="250dp"
+                android:layout_below="@+id/txt7"
+                android:layout_centerHorizontal="true"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/btn_upload_sppd_manual"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/imgV_sppd_manual"
+                android:layout_marginTop="10dp"
+                android:text="Take Picture"
+                android:drawableLeft="@drawable/ic_camera"/>
+
+            <Button
+                android:id="@+id/btn_upload_restitusi"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_below="@+id/btn_upload_sppd_manual"
+                android:layout_marginTop="20dp"
+                android:background="@color/colorPrimaryDark"
+                android:text="Mengajukan" />
+
+
+            <ImageView
+                android:id="@+id/plnlogo"
+                android:layout_width="150dp"
+                android:layout_height="200dp"
+                android:layout_centerHorizontal="true"
+                android:scaleType="fitXY"
+                android:src="@drawable/ic_pln" />
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+</android.support.constraint.ConstraintLayout>
