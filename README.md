@@ -7,4 +7,4 @@ RESTITUSI
 
 File : Restitusi (file website, sebagai halaman persetujuan admin)
 
-File : RestitusiPLN (file android yang di gunakan oleh pegawai untuk mengajukan restitusi
+File : RestitusiPLN (file android yang di gunakan oleh pegawai untuk mengajukan restitusi)
